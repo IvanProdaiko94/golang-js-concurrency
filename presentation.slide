@@ -124,10 +124,16 @@ Do not communicate by sharing memory; Instead, share memory by communication.
 .code go/wg.go
 
 * Concurrent queue
-.code js/concurrent_queue.js
+.link https://github.com/IvanProdaiko94/golang-js-concurrency/blob/master/js/concurrent_queue.js Simple queue
 
 * Concurrent queue usage
 .code js/q_use.js
+
+* Parallel queue
+.link https://github.com/IvanProdaiko94/golang-js-concurrency/blob/master/go/queue/queue.go Simple queue
+
+* Parallel queue usage
+.code go/queue/queue_example.go
 
 #
 * Conclusions
