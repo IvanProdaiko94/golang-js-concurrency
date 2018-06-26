@@ -130,7 +130,7 @@ Do not communicate by sharing memory; Instead, share memory by communication.
 .code js/q_use.js
 
 * Parallel queue
-.link https://github.com/IvanProdaiko94/golang-js-concurrency/blob/master/go/queue/queue.go Simple queue
+.code go/queue/queue.go
 
 * Parallel queue usage
 .code go/queue/queue_example.go

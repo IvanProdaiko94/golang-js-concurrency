@@ -10,12 +10,11 @@ func main() {
 	for i := 0; i < 50; i++ {
 		arr = append(arr, i)
 	}
-	results, err := ParallelQueue(arr, 10, func(t Task) (Task, error) {
-		<-time.After(time.Duration(time.Second * time.Duration(1)))
+	ch := ParallelQueue(arr, 25, func(t Task) (Task, error) {
+		<-time.After(time.Second)
 		return t, nil
 	})
-	if err != nil {
-		fmt.Errorf(err.Error())
+	for x := range ch {
+		fmt.Println(x)
 	}
-	fmt.Println(results)
 }
