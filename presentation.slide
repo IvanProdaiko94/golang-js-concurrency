@@ -144,3 +144,7 @@ suites you best and how massive the network service needs to scale.
 Node.js provides us ease of development, one language both for backend and frontend.
 
 Golang gives us performance in runtime due to its parallel nature.
+
+.image images/nodejs-vs-golang.jpg
+
+All images
