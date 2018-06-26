@@ -147,4 +147,8 @@ Golang gives us performance in runtime due to its parallel nature.
 
 .image images/nodejs-vs-golang.jpg
 
-All images
+* Gopher credits
+
+Renee French is creator of Go gopher and all of the rights belong to him.
+
+.image images/gopher.png
