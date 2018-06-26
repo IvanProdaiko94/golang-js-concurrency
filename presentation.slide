@@ -1,0 +1,140 @@
+Comparison of GOLANG and JS concurrency patterns
+
+* Agenda
+- Parallelism and concurrency basics
+- Processes vs Threads vs Goroutines
+- Code examples
+
+
+#
+* Sequential execution in one thread
+
+Sequential execution is about boredom
+
+.image images/sync.jpg
+
+Handle every action one by one with one executor doing everything
+
+
+#
+* Concurrency
+
+Concurrency is about dealing with many things at once
+
+.image images/concurrency.jpeg
+
+Handle many actions one at a time with one executor doing everything
+
+
+#
+* Parallelism
+
+Parallelism is about doing many things at once
+
+.image images/parallelism.jpg
+
+Handle every action simultaneously with many executors doing everything
+
+
+#
+* Processes vs Threads vs Goroutines
+
+* Process
+- Heavywight
+- Managed by OS
+- Own runtime memory (heap)
+- Own stack
+- Executed completely on one logical core or share runtime with other processes
+
+* Thread
+- Middlewight
+- Managed by process
+- Share heap with process
+- Own stack
+- Executed on one logical core
+
+* Goroutine
+- Lightweight
+- Managed by Go scheduler
+- Share heap with process
+- Own stack
+- Executed asynchronously after being mapped to all logical cores
+
+
+* Wait! Hasn't there a communication problem emerged?
+
+.image images/channels.jpg
+
+* Processes
+
+- Parent/child communication (writing to stdin) Danger! Zombie apocalypse!`
+.image images/zombies.jpg
+- Message brokers (Rabbit MQ)
+
+* Threads
+
+- Shared memory
+- Mutexes/semaphores
+- RW mutexes
+
+* Goroutines
+
+- Channels!!!
+- And everything mentioned before
+
+* Channels
+
+Do not communicate by sharing memory; Instead, share memory by communication.
+
+- Channels can be thought as pipes using which Goroutines communicate.
+
+- When a data is sent to a channel, the control is blocked in the send statement until some other Goroutine reads from that channel.
+
+- Similarly when data is read from a channel, the read is blocked until some Goroutine writes data to that channel.
+
+- This property of channels is what helps Goroutines communicate effectively without the use of explicit locks or conditional variables that are quite common in other programming languages.
+
+- Data is copied while writing in and reading from channel, thus making communication thread safe.
+
+#
+* JS event loop
+
+.image images/event_loop.svg
+
+- Heap. Objects are allocated in a heap - large mostly unstructured region of memory.
+- Queue. A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message. The processing of functions continues until the stack is once again empty;
+- Stack. Stack for function to be called. Contain frames with arguments and local variables.
+
+
+# Code
+* Sequential
+.code js/callbacks1.js
+
+* Concurrent
+.code js/callbacks2.js
+
+* Channels
+
+.code go/channels.go
+
+* Promise.all vs wait group (Promise all)
+.code js/promises.js
+
+* Promise.all vs wait group (Wait group)
+.code go/wg.go
+
+* Concurrent queue
+.code js/concurrent_queue.js
+
+* Concurrent queue usage
+.code js/q_use.js
+
+#
+* Conclusions
+
+The choice between Node.js or Go very much depends on which type of development
+suites you best and how massive the network service needs to scale.
+
+Node.js provides us ease of development, one language both for backend and frontend.
+
+Golang gives us performance in runtime due to its parallel nature.
