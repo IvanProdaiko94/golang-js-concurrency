@@ -153,7 +153,14 @@ Golang gives us performance in runtime due to its parallel nature.
 
 .image images/nodejs-vs-golang.jpg
 
-* Gopher credits
+* References and credits
+
+.link https://www.youtube.com/watch?v=cN_DpYBzKso Concurrency Is Not Parallelism
+.link https://www.youtube.com/watch?v=KBZlN0izeiY Understanding channels
+.link https://blog.golang.org/share-memory-by-communicating Share Memory By Communicating
+.link https://golang.org/ref/mem The Go Memory Model
+.link https://medium.freecodecamp.org/node-js-streams-everything-you-need-to-know-c9141306be93 Node.js Streams: Everything you need to know
+.link https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=6s What the heck is the event loop anyway?
 
 Renee French is creator of Go gopher and all of the rights belong to him.
 
