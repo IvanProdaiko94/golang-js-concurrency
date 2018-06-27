@@ -46,7 +46,7 @@ class ConcurrentQueue extends EventEmitter {
       this.emit('task', task, next);
     };
 
-    while (running < this.concurrency) {
+    while (running < this.concurrency && this.tasks.length > 0) {
       trigger();
     }
   }
