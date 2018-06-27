@@ -125,15 +125,23 @@ Do not communicate by sharing memory; Instead, share memory by communication.
 * Concurrent
 .code js/callbacks2.js
 
-* Channels
-
-.code go/channels.go
-
 * Promise.all vs wait group (Promise all)
 .code js/promises.js
 
 * Promise.all vs wait group (Wait group)
 .code go/wg.go
+
+* Generators 1
+.code js/generators1.js
+
+* Channels 1
+.code go/channels1.go
+
+* Generators 2
+.code js/generators2.js
+
+* Channels 2
+.code go/channels2.go
 
 * Concurrent queue
 .link https://github.com/IvanProdaiko94/golang-js-concurrency/blob/master/js/cq1/concurrent_queue.js Simple queue
