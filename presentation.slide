@@ -82,6 +82,18 @@ Handle every action simultaneously with many executors doing everything
 - Channels!!!
 - And everything mentioned before
 
+* Mutexes/semaphores
+
+*** Using Mutex:
+
+Strictly speaking, a mutex is locking mechanism used to synchronize access to a resource.
+At any point of time, only one thread can work with the entire locked resource.
+
+*** Using Semaphore:
+
+Semaphore is signaling mechanism (“I am done, you can carry on” kind of signal).
+At any point of time, several threads can work with parts of resource depending on semaphore configuration.
+
 * Channels
 
 Do not communicate by sharing memory; Instead, share memory by communication.
