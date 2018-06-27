@@ -18,6 +18,10 @@ class ConcurrentQueue extends Readable {
       this.push(result);
       if (err !== null) {
         this.emit('error', err);
+        return
+      }
+      if (this.tasks.length === 0 && this.running === 0) {
+        this.push(null)
       }
     };
     const trigger = () => {

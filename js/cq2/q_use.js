@@ -18,4 +18,5 @@ queue
       console.log("write", data);
       done();
     }
-  }));
+  }))
+  .on('finish', () => console.log('finished'));
