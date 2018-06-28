@@ -1,4 +1,4 @@
-Comparison of GOLANG and JS concurrency patterns
+Comparison of GOLANG concurrency and JS async patterns
 
 * Agenda
 - Parallelism and concurrency basics
@@ -67,7 +67,7 @@ Handle every action simultaneously with many executors doing everything
 
 * Processes
 
-- Parent/child communication (writing to stdin) Danger! Zombie apocalypse!`
+- Parent/child communication (writing to stdin) Danger! Zombie apocalypse!
 .image images/zombies.jpg
 - Message brokers (Rabbit MQ)
 
